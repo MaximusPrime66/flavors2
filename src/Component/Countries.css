@@ -1,0 +1,242 @@
+/* Import font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700,800');
+
+:root {
+  --primary-color: #cfd6e1;
+  --bg-color: #000000; /* Changed to black */
+  --title-color: #9ac7fa;
+  --background-image: url(https://wallpaperswide.com/download/lake_como_night_bellagio_italy-wallpaper-3840x1600.jpg);
+  --background-image2: url(https://i.pinimg.com/originals/20/d4/b1/20d4b1bc1b1e36f122db5e03d32a3b03.jpg); 
+  --background-image3: url(https://static1.squarespace.com/static/51b3dc8ee4b051b96ceb10de/t/58d86b3db3db2b57ce8f2986/1490578241899/?format=2500w);
+  --background-image4: url(https://i.pinimg.com/originals/59/dd/6b/59dd6b05bb6e87070969d00c48c3a57c.png);
+  --background-image5: url(https://preview.redd.it/5bbm2bct09w41.png?auto=webp&s=2169a9d09e91ebf71992cfa2c8a5a120a948d3a3);
+  --font-stack-content: 'Montserrat', helvetica, arial, sans-serif;
+  --font-stack-header: 'Montserrat', helvetica, arial, sans-serif;
+  --secondary-color: #6557719d;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: var(--bg-color); /* Changed to black */
+  font-family: var(--font-stack-content);
+  font-size: 14px;
+  color: var(--primary-color);
+  line-height: 1.5;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+* {
+  transition: .4s;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  border: 0;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.movie-card {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: 100%;
+  min-height: 300px;
+  display: block;
+  margin: 8vh auto;
+  border-radius: 12px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.35);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 12px 24px rgba(0,0,0,0.45);
+  filter: brightness(110%) contrast(120%);
+}
+
+.movie-card[data-movie="Blade Runner"] {
+  background-image: var(--background-image);
+}
+
+.movie-card[data-movie="Back to the Future"] {
+  background-image: var(--background-image2);
+}
+
+.movie-card[data-movie="Akira"] {
+  background-image: var(--background-image3);
+}
+
+.movie-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 30%, rgba(255, 255, 255, 0) 80%);
+  border-radius: 12px;
+  z-index: 1;
+  transition: opacity 0.4s ease;
+}
+
+.movie-card:hover::before {
+  opacity: 0.6;
+}
+
+.movie-card__overlay {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(to right, rgba(42,159,255,0.2) 0%, rgba(33,33,32,0.7) 100%);
+  background-blend-mode: multiply;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  transition: opacity 0.4s ease;
+  z-index: 2;
+}
+
+.movie-card:hover .movie-card__overlay {
+  opacity: 0.5;
+}
+
+.movie-card__share {
+  padding: 1em;
+  display: inline-block;
+  width: 100%;
+  max-width: 130px;
+  z-index: 3;
+}
+
+.movie-card__icon {
+  color: #ffffff;
+  mix-blend-mode: lighten;
+  opacity: .6;
+  background: none;
+  padding: 0;
+  transition: color 0.3s ease, opacity 0.3s ease;
+  z-index: 3;
+}
+
+.movie-card__icon:hover {
+  color: var(--secondary-color);
+  opacity: 1;
+  mix-blend-mode: lighten;
+}
+
+.movie-card__icon:not(:first-of-type) {
+  margin-left: 5px;
+}
+
+.movie-card__icon i {
+  font-size: 1.2em;
+}
+
+.movie-card__content {
+  width: 100%;
+  max-width: 370px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Align content evenly */
+  position: relative;
+  padding-left: 1.2em;
+  padding-bottom: 1em;
+  box-sizing: border-box; /* Include padding in width */
+  z-index: 3;
+}
+
+.movie-card__header {
+  margin-bottom: 2em;
+}
+
+.movie-card__title {
+  color: #ffffff;
+  margin-bottom: .25em;
+  padding-top: 1em; /* Adjust padding-top to move the title down */
+  opacity: .85;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.movie-card__info {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: .9em;
+  color: var(--secondary-color);
+  line-height: 1;
+  margin: 0;
+  font-weight: bold;
+  opacity: .7;
+}
+
+.movie-card__desc {
+  font-weight: 300;
+  opacity: .9;
+  font-weight: 700;
+  margin-bottom: 2em;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-stack-header);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1;
+  font-weight: 500; /* Made bolder */
+}
+
+.btn {
+  padding: .10rem 2rem;
+  background-color: rgba(255,255,255,.4);
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  font-weight: 700; /* Made bolder */
+}
+
+.btn:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 3px solid #ffffff;
+  color: #ffffff;
+  text-align: center; /* Center-align text */
+  display: inline-block; /* Ensure proper spacing */
+  font-weight: 700; /* Made bolder */
+}
+
+.btn-outline:hover {
+  border-color: var(--secondary-color);
+  color: #ffffff; /* Keep text color unchanged on hover */
+  box-shadow: 0px 1px 8px rgba(245,199,0,.2);
+}

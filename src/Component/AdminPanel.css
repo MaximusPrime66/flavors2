@@ -1,0 +1,185 @@
+/* Main container for the admin panel */
+.admin-panel-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar navigation */
+.admin-sidebar {
+  width: 250px;
+  background-color: #000000; /* Updated background color to black */
+  color: #fff;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.admin-sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.admin-sidebar a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.admin-sidebar a:hover {
+  background-color: #333; /* Slightly lighter background on hover */
+}
+
+/* Main content area */
+.admin-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #000000; /* Updated background color to black */
+  padding: 20px;
+}
+
+/* Topbar for header and user info */
+.admin-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000; /* Updated background color to black */
+  padding: 15px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px; /* Move down the topbar */
+}
+
+.admin-topbar h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #fff; /* Ensure text is visible on black background */
+}
+
+.admin-user-info {
+  display: flex;
+  align-items: center;
+}
+
+.admin-user-info p {
+  margin-right: 15px;
+  color: #fff; /* Ensure text is visible on black background */
+}
+
+.admin-user-info a {
+  color: rgb(153, 125, 87); /* Updated color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.admin-user-info a:hover {
+  color: #a07a5f; /* Slightly darker shade for hover effect */
+}
+
+/* Content section for cards and table */
+.admin-content {
+  flex: 1;
+}
+
+/* Card display */
+.admin-cards {
+  color: #000000;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 40px; /* Move down the cards */
+}
+
+.admin-card {
+  background-color: #000000; /* Updated background color to black */
+  color: #fff; /* Ensure text is visible on black background */
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Reduced border size */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 calc(33.333% - 20px); /* Adjust width and gap */
+  margin-bottom: 20px;
+}
+
+.admin-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Actions section for buttons */
+.admin-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.admin-btn {
+  background-color: rgb(153, 125, 87); /* Updated background color */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.admin-btn:hover {
+  background-color: #a07a5f; /* Slightly darker shade for hover effect */
+  transform: scale(1.05);
+}
+
+/* Table styling */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table thead {
+  background-color: rgb(153, 125, 87); /* Updated background color */
+  color: #fff;
+}
+
+.admin-table th, .admin-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.admin-table tbody tr:hover {
+  background-color: #333; /* Slightly lighter background on row hover */
+  transition: background-color 0.3s ease;
+}
+
+.admin-table a {
+  color: rgb(153, 125, 87); /* Updated color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.admin-table a:hover {
+  color: #a07a5f; /* Slightly darker shade for hover effect */
+}
+
+/* Increase height of recipe category */
+.recipe-category {
+  min-height: 350px; /* Adjust this value to make the section taller */
+  padding: 20px; /* Padding for spacing inside the section */
+  box-sizing: border-box; /* Include padding in the element's total height */
+  margin-bottom: 60px; /* Space between sections */
+}
+
+.recipe-category h2 {
+  margin-bottom: 20px; /* Space between the heading and table */
+}
+
+.mix {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.max {
+  color: rgb(153, 125, 87); /* Updated color */
+}

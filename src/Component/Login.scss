@@ -1,0 +1,321 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    background: #ededed;
+    padding-top: 7%;
+    background-size: cover;
+    // background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d68aec44-344d-4190-a8f0-120cf46940e6/dggbthv-6eba113c-7324-4b1e-b352-039ae659e997.jpg/v1/fill/w_1244,h_700,q_70,strp/golden_drizzle_feast___food36_by_artbluespirit_dggbthv-350t-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA4MCIsInBhdGgiOiJcL2ZcL2Q2OGFlYzQ0LTM0NGQtNDE5MC1hOGYwLTEyMGNmNDY5NDBlNlwvZGdnYnRodi02ZWJhMTEzYy03MzI0LTRiMWUtYjM1Mi0wMzlhZTY1OWU5OTcuanBnIiwid2lkdGgiOiI8PTE5MjAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.6RAk6Kzd7MvnZQkV9Vm_yUKtbjaRHDl1Q9WS2-Wj50g')
+}
+
+input, button {
+    border: none;
+    outline: none;
+    background: none;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+$contW: 700px; /* Reduced container width */
+$imgW: 200px; /* Reduced image width */
+$formW: $contW - $imgW;
+$switchAT: 1.2s;
+
+$inputW: 200px; /* Reduced input width */
+$btnH: 30px; /* Reduced button height */
+
+$diffRatio: ($contW - $imgW) / $contW;
+
+@mixin signUpActive {
+    .cont.s--signup & {
+        @content;
+    }
+}
+
+.tip {
+    font-size: 18px; /* Reduced font size */
+    margin: 30px auto 40px; /* Adjusted margin */
+    text-align: center;
+}
+
+.cont {
+    overflow: hidden;
+    position: relative;
+    width: $contW;
+    height: 450px; /* Reduced container height */
+    margin: 0 auto 80px; /* Adjusted margin */
+    background: #3f1d1d;
+}
+
+.form {
+    position: relative;
+    width: $formW;
+    height: 100%;
+    transition: transform $switchAT ease-in-out;
+    padding: 40px 20px 0; /* Adjusted padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sub-cont {
+    overflow: hidden;
+    position: absolute;
+    left: $formW;
+    top: 0;
+    width: $contW;
+    height: 100%;
+    padding-left: $imgW;
+    background: #3f1d1d;
+    transition: transform $switchAT ease-in-out;
+
+    @include signUpActive {
+        transform: translate3d($formW * -1,0,0);
+    }
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    width: $inputW;
+    height: $btnH;
+    border-radius: 25px; /* Reduced border radius */
+    color: #fff;
+    font-size: 14px; /* Reduced font size */
+    cursor: pointer;
+}
+
+.img {
+    overflow: hidden;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: $imgW;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &:before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: $contW;
+        height: 100%;
+        background-image: url('https://images.pexels.com/photos/920220/pexels-photo-920220.jpeg?auto=compress&cs=tinysrgb&w=600');
+        background-size: cover;
+        transition: transform $switchAT ease-in-out;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.6);
+    }
+
+    @include signUpActive {
+        &:before {
+            transform: translate3d($formW,0,0);
+        }
+    }
+
+    &__text {
+        z-index: 2;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        padding: 0 15px; /* Reduced padding */
+        text-align: center;
+        color: #fff;
+        transition: transform $switchAT ease-in-out;
+        transform: translateY(-50%);
+
+        h2 {
+            margin-bottom: 10px;
+            font-weight: normal;
+            font-size: 22px; /* Reduced font size */
+        }
+
+        p {
+            font-size: 12px; /* Reduced font size */
+            line-height: 1.5;
+        }
+
+        &.m--up {
+            @include signUpActive {
+                transform: translate($imgW*2, -50%);
+            }
+        }
+
+        &.m--in {
+            transform: translate($imgW * -2, -50%);
+
+            @include signUpActive {
+                transform: translate(0, -50%);
+            }
+        }
+    }
+
+    &__btn {
+        overflow: hidden;
+        z-index: 2;
+        position: absolute;
+        left: 50%;
+        bottom: 15px; /* Reduced bottom position */
+        transform: translateX(-50%);
+        width: 80px; /* Reduced button width */
+        height: $btnH;
+        margin: 0 auto;
+        background: transparent;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 14px; /* Reduced font size */
+        cursor: pointer;
+
+        &:after {
+            content: '';
+            z-index: 2;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            border: 2px solid #fff;
+            border-radius: 25px; /* Reduced border radius */
+        }
+
+        span {
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            transition: transform $switchAT;
+
+            &.m--in {
+                transform: translateY($btnH*-2);
+
+                @include signUpActive {
+                    transform: translateY(0);
+                }
+            }
+
+            &.m--up {
+                @include signUpActive {
+                    transform: translateY($btnH*2);
+                }
+            }
+        }
+    }
+}
+
+h2 {
+    width: 100%;
+    font-size: 22px; /* Reduced font size */
+    text-align: center;
+}
+
+label {
+    display: block;
+    width: $inputW;
+    margin: 20px auto 0; /* Adjusted margin */
+    text-align: center;
+
+    span {
+        font-size: 12px;
+        color: #695f5f;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
+
+input {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    font-size: 14px; /* Reduced font size */
+    border-bottom: 1px solid rgba(0,0,0,0.4);
+    text-align: center;
+}
+
+.forgot-pass {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 12px;
+    color: #7d7b7b;
+}
+
+.submit {
+    margin-top: 30px; /* Adjusted margin */
+    margin-bottom: 20px;
+    background: #d4af7a;
+    text-transform: uppercase;
+}
+
+.fb-btn {
+    border: 2px solid #d3dae9;
+    color: darken(#d3dae9, 20%);
+
+    span {
+        font-weight: bold;
+        color: darken(#768cb6, 20%);
+    }
+}
+
+.sign-in {
+    transition-timing-function: ease-out;
+    background-color: #dcb496;
+    color: rgb(0, 0, 0);
+    @include signUpActive {
+        transition-timing-function: ease-in-out;
+        transition-duration: $switchAT;
+        transform: translate3d($formW,0,0);
+    }
+}
+
+.sign-up {
+    transform: translate3d($contW * -1,0,0);
+    background-color: #dcb496;
+    color: black;
+    @include signUpActive {
+        transform: translate3d(0,0,0);
+    }
+}
+
+.icon-link {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    width: 32px;
+
+    img {
+        width: 100%;
+        vertical-align: top;
+    }
+
+    &--twitter {
+        left: auto;
+        right: 5px;
+    }
+}
+
+.link-footer {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}

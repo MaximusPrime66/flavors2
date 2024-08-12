@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap');
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it stays on top */
+  background-color: #cf9553a3; /* Mild brown color */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* Adjusted padding */
+  font-family: 'Playfair Display', serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for better visibility */
+  position: absolute;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none; /* Remove bullet points if using ul */
+  padding: 0; /* Remove default padding if using ul */
+  margin: 0; /* Remove default margin if using ul */
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  padding: 10px 15px; /* Add padding for clickable area */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #3e2d1a; /* Slight hover effect */
+  transform: scale(1.05);
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-buttons a {
+  padding: 10px 20px;
+  color: white;
+  background-color: #50391b; /* Darker shade of brown */
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-buttons a:hover {
+  background-color: #3e2d1a; /* Even darker shade of brown */
+  transform: scale(1.05);
+}

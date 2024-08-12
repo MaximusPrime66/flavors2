@@ -1,0 +1,153 @@
+.contact_us {
+  background-color: #000; /* Changed to black */
+  padding: 60px 0; /* Reduced padding for a more compact layout */
+}
+
+.contact_inner {
+  background-color: #000; /* Changed to black */
+  position: relative;
+  box-shadow: 20px 22px 44px #cccc;
+  border-radius: 15px; /* Adjust border radius for a square look */
+  padding: 20px; /* Reduced padding for a compact container */
+  max-width: 500px; /* Adjust width to be more square-like */
+  margin: 0 auto; /* Center the container */
+}
+
+.contact_field {
+  padding: 20px; /* Reduced padding for a more compact form */
+}
+
+.contact_field h3 {
+  color: #fff; /* Changed to white */
+  font-size: 28px; /* Reduced font size for better fit */
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.contact_field p {
+  color: #fff; /* Changed to white */
+  font-size: 14px; /* Adjusted font size */
+  margin-bottom: 20px; /* Adjusted margin */
+}
+
+.contact_field .form-control {
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  color: #fff; /* Changed to white */
+}
+
+.contact_field .form-control:focus {
+  box-shadow: none;
+  outline: none;
+  border-bottom: 2px solid #1325e8;
+}
+
+.contact_field .form-control::placeholder {
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.contact_info_sec {
+  position: absolute;
+  background-color: #2d2d2d;
+  right: 10px; /* Adjusted right position */
+  top: 10%; /* Adjusted top position */
+  height: 300px; /* Reduced height */
+  width: 300px; /* Made it square */
+  padding: 20px; /* Reduced padding */
+  border-radius: 15px; /* Adjusted border radius for a square look */
+}
+
+.contact_info_sec h4 {
+  color: #fff; /* Changed to white */
+  letter-spacing: 1px;
+  margin-bottom: 15px; /* Adjusted margin */
+}
+
+.info_single {
+  margin: 20px 0; /* Adjusted margin */
+}
+
+.info_single i {
+  margin-right: 10px; /* Adjusted margin */
+}
+
+.info_single span {
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+button.contact_form_submit {
+  background: linear-gradient(to top right, #1325e8 -5%, #8f10b7 100%);
+  border: none;
+  color: #fff; /* Changed to white */
+  padding: 10px 15px;
+  width: 100%;
+  margin-top: 20px; /* Adjusted margin */
+  border-radius: 25px; /* Adjusted border radius */
+  cursor: pointer;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.right_contact_social_icon {
+  background: linear-gradient(to top right, #1325e8 -5%, #8f10b7 100%);
+  height: auto;
+}
+
+.social_item_inner li {
+  list-style: none;
+}
+
+.social_item_inner li a {
+  color: #fff; /* Changed to white */
+  margin: 0 10px; /* Adjusted margin */
+  font-size: 16px; /* Adjusted font size */
+}
+
+.social_item_inner {
+  padding-bottom: 10px;
+}
+
+.map_sec {
+  padding: 30px 0; /* Reduced padding */
+}
+
+.map_inner h4, .map_inner p {
+  color: #ffffff; /* Changed to white */
+  text-align: center;
+}
+
+.map_inner p {
+  font-size: 14px; /* Adjusted font size */
+}
+
+.map_bind {
+  margin-top: 30px; /* Adjusted margin */
+  border-radius: 15px; /* Adjusted border radius */
+  overflow: hidden;
+}
+
+.contact_field textarea {
+  border-radius: 0;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9; /* Light gray background color */
+  color: #000; /* Text color */
+  padding: 10px;
+  font-size: 14px;
+  width: 100%; /* Full width */
+  resize: vertical; /* Allow vertical resizing */
+}
+
+.contact_field textarea:focus {
+  border-color: #1325e8; /* Focus border color */
+  background-color: #fff; /* Background color on focus */
+  outline: none; /* Remove default outline */
+}
+
+h3 {
+  color: #fff; /* Changed to white */
+  text-align: center;
+}

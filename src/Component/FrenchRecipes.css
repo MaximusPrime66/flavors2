@@ -1,0 +1,163 @@
+/* Global Styles */
+body {
+    font-family: "Roboto", sans-serif !important;
+  }
+  
+  /* Section Styles */
+  .advertisers-service-sec {
+    background-color: #ffffff;
+  }
+  
+  .advertisers-service-sec span {
+    color: rgb(255, 23, 131);
+  }
+  
+  /* Section Header */
+  .advertisers-service-sec .section-header {
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  
+  .advertisers-service-sec .section-header h2 {
+    font-size: 2em;
+    font-weight: bold;
+  }
+  
+  .advertisers-service-sec .section-header .b-class-secondary {
+    color: rgb(255, 23, 131);
+  }
+  
+  .advertisers-service-sec .sec-icon {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    margin: 0 auto;
+  }
+  
+  .advertisers-service-sec .sec-icon::before,
+  .advertisers-service-sec .sec-icon::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    margin-top: -5.5px;
+    top: 60%;
+    background: #ffffff;
+    width: 50px;
+  }
+  
+  .advertisers-service-sec .sec-icon::before {
+    left: -70px;
+  }
+  
+  .advertisers-service-sec .sec-icon::after {
+    right: -70px;
+  }
+  
+  /* Card Layout */
+  .advertisers-service-sec .row {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    justify-content: center; /* Center cards horizontally */
+  }
+  
+  .advertisers-service-sec .col {
+    padding: 0 1em 1em 1em;
+    text-align: center;
+    flex: 1 1 33.333%; /* Flex-grow, flex-shrink, and flex-basis */
+    max-width: 33.333%; /* Limit the maximum width to 33.333% to fit 3 cards in a row */
+  }
+  
+  /* Service Card Styles */
+  .advertisers-service-sec .service-card {
+    display: flex;
+    flex-direction: column; /* Stack card content vertically */
+    justify-content: space-between; /* Space between content and button */
+    padding: 2em 1.5em;
+    border-radius: 5px;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    transition: 0.5s;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    background: #fff;
+    margin: 0 auto; /* Center the card horizontally */
+    height: 100%; /* Ensure the card height is 100% of its container */
+  }
+  
+  .advertisers-service-sec .service-card::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#b8b8b8, rgb(0, 0, 0));
+    position: absolute;
+    left: 0;
+    top: -98%;
+    z-index: -2;
+    transition: all 0.4s cubic-bezier(0.77, -0.04, 0, 0.99);
+  }
+  
+  .advertisers-service-sec .service-card h3 {
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #1f194c;
+    margin: 1em 0;
+    z-index: 3;
+  }
+  
+  .advertisers-service-sec .service-card p {
+    color: #575a7b;
+    font-size: 15px;
+    line-height: 1.4; /* Reduced line height */
+    letter-spacing: 0.03em;
+    z-index: 3;
+  }
+  
+  .advertisers-service-sec .service-card img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Button Styles */
+  .advertisers-service-sec .service-card button {
+    align-self: center; /* Center the button horizontally */
+    margin-top: 1em; /* Add some space above the button */
+    padding: 0.25em 0.75em; /* Smaller padding */
+    font-size: 0.75rem; /* Smaller font size */
+    line-height: 1.2; /* Adjust line height */
+    border: 2px solid #1f194c; /* Border color */
+    color: #1f194c; /* Text color */
+    background: transparent; /* Transparent background */
+    cursor: pointer; /* Ensure the button is clickable */
+    border-radius: 5px; /* Rounded corners for the button */
+    transition: background 0.3s, color 0.3s; /* Smooth transition for hover effects */
+  }
+  
+  .advertisers-service-sec .service-card button:hover {
+    background: #1f194c; /* Background color on hover */
+    color: #ffffff; /* Text color on hover */
+  }
+  
+  /* Hover Effects */
+  .advertisers-service-sec .service-card:hover:after {
+    top: 0%;
+  }
+  
+  .advertisers-service-sec .service-card:hover .icon-wrapper {
+    color: #0dcaf0;
+  }
+  
+  .advertisers-service-sec .service-card:hover h3 {
+    color: #ffffff;
+  }
+  
+  .advertisers-service-sec .service-card:hover p {
+    color: #f0f0f0;
+  }
+  
+  .sec-icon {
+    display: inline-block;
+  }
+  

@@ -1,0 +1,208 @@
+.recipe {
+  border: 1px solid #eee;
+  padding: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 60%;
+  background-color: #000; /* Black background */
+  color: #fff; /* White text color for contrast */
+  
+  header {
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    padding: 1rem;
+    padding-bottom: 2rem; /* Ensure space below header content */
+  }
+  
+  &__img {
+    overflow: hidden;
+    height: 250px;
+    width: 100%;
+  
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
+  &__content {
+    position: relative; /* Position relative for the like button */
+    padding: 1rem;
+    width: 100%;
+  }
+  
+  &__servings {
+    width: 3rem;
+    margin: 0 auto;
+  }
+  
+  // Ingredients
+  &__ingredients {
+    margin-top: 1rem;
+    padding: 0 1rem; /* Add padding on both sides */
+    text-align: left; /* Align text to the left */
+    max-width: 100%; /* Ensure full width */
+    margin-left: 0; /* Align to the left edge */
+  
+    h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      color: white; /* Ensure heading is visible on dark background */
+    }
+  
+    ul {
+      padding-left: 1rem; /* Add padding for list items */
+    }
+  
+    li {
+      list-style-type: none;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center; /* Aligns checkbox and text */
+    }
+  
+    label {
+      cursor: pointer;
+      display: flex;
+      align-items: center; /* Aligns checkbox and text */
+      width: 100%; /* Ensure label takes full width of li */
+      font-size: 1rem; /* Adjust font size for readability */
+      
+      &:hover {
+        color: #3298dc;
+      }
+  
+      input {
+        appearance: none;
+        margin-right: 0.5rem;
+        width: 1rem;
+        height: 1rem;
+        border: 1px solid #ffffff;
+        border-radius: 4px;
+        position: relative;
+        display: inline-block;
+        background-color: #fff;
+  
+        &::before {
+          content: "";
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          background: url('./check.png') center/contain no-repeat;
+          opacity: 0; /* Initially hidden */
+          transition: opacity 0.2s;
+        }
+  
+        &:checked::before {
+          opacity: 1; /* Show SVG when checked */
+        }
+      }
+    }
+  }
+  
+  // Directions
+  &__directions {
+    margin-top: 1rem;
+    padding: 0 1rem; /* Add padding on both sides */
+    text-align: left; /* Align text to the left */
+    max-width: 100%; /* Ensure full width */
+    margin-left: 0; /* Align to the left edge */
+    
+    h2 {
+      font-size: 1.5rem;
+      font-weight: normal; /* Remove bold */
+      margin-bottom: 0.5rem;
+      text-align: center; /* Center align the title */
+      color: white; /* Ensure heading is visible on dark background */
+    }
+  
+    ol {
+      padding-left: 0; /* Remove padding for list items */
+      list-style-type: none; /* Remove list styling */
+    }
+  
+    li {
+      margin-bottom: 1rem; /* Space between steps */
+      font-size: 1rem;
+      color: #ffffff; /* Ensure text is visible on dark background */
+      line-height: 1.5; /* Improve readability */
+    }
+  }
+  
+  .header-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .header-left {
+    text-align: left;
+  }
+  
+  .header-right {
+    text-align: right;
+  }
+  
+  .tags {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    margin-bottom: 0.5rem;
+    padding: 0; /* Remove padding */
+    list-style-type: none; /* Remove list bullets */
+  }
+  
+  .tag {
+    background-color: #ffffff;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    color: #333; /* Adjust tag text color for contrast */
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .lead {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+  
+  .like-button {
+    position: absolute; /* Position absolutely within the .recipe__content container */
+    top: 200px; /* Distance from the top */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* Remove background */
+    border: none;
+    cursor: pointer;
+    padding: 0; /* Remove padding */
+    
+    img {
+      padding-top: 0; /* Remove top padding */
+      width: 55px; /* Increased size */
+      height: 55px; /* Increased size */
+      transition: transform 0.3s, filter 0.3s;
+    }
+    
+    &:hover img {
+      transform: scale(1.15); /* Slightly scale up on hover */
+    }
+    
+    .liked {
+      /* Red color effect for the liked state */
+      filter: sepia(1) saturate(10000%) hue-rotate(-50deg) brightness(0.9) contrast(1);
+      transform: scale(1.3); /* Slightly scale up to make it pop */
+      transition: transform 0.3s, filter 0.3s;
+    }
+  }
+}
