@@ -7,7 +7,7 @@
 /* Sidebar navigation */
 .admin-sidebar {
   width: 250px;
-  background-color: #000000; /* Updated background color to black */
+  background-color: #000000; /* Background color set to black */
   color: #fff;
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
@@ -36,7 +36,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  background-color: #000000; /* Updated background color to black */
+  background-color: #000000; /* Background color set to black */
   padding: 20px;
 }
 
@@ -45,16 +45,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #000000; /* Updated background color to black */
+  background-color: #000000; /* Background color set to black */
   padding: 15px 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-bottom: 30px; /* Move down the topbar */
+  margin-bottom: 30px; /* Space below the topbar */
 }
 
 .admin-topbar h1 {
   margin: 0;
   font-size: 24px;
-  color: #fff; /* Ensure text is visible on black background */
+  color: #fff; /* Text color set to white */
 }
 
 .admin-user-info {
@@ -64,7 +64,7 @@
 
 .admin-user-info p {
   margin-right: 15px;
-  color: #fff; /* Ensure text is visible on black background */
+  color: #fff; /* Text color set to white */
 }
 
 .admin-user-info a {
@@ -89,12 +89,12 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  margin-bottom: 40px; /* Move down the cards */
+  margin-bottom: 40px; /* Space below the cards */
 }
 
 .admin-card {
-  background-color: #000000; /* Updated background color to black */
-  color: #fff; /* Ensure text is visible on black background */
+  background-color: #000000; /* Background color set to black */
+  color: #fff; /* Text color set to white */
   padding: 20px;
   border-radius: 5px;
   border: 1px solid rgba(255, 255, 255, 0.5); /* Reduced border size */
@@ -182,4 +182,96 @@
 
 .max {
   color: rgb(153, 125, 87); /* Updated color */
+}
+/* Popup Styles */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Darker overlay for better contrast */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Ensure popup is above other content */
+}
+
+.popup-content {
+  background: #ffffff; /* White background for popup */
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px; /* Adjust width as needed */
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+/* Center content within popup */
+.popup-content {
+  margin: 0 auto; /* Center horizontally */
+}
+
+/* Heading styling */
+.popup-content h2 {
+  margin-top: 0;
+  margin-bottom: 20px; /* Space below heading */
+  font-size: 24px; /* Larger font size for heading */
+  color: #333; /* Darker text color for readability */
+}
+
+/* Form layout */
+.popup-content form {
+  display: flex;
+  flex-direction: column; /* Arrange items in a column */
+}
+
+/* Form label styling */
+.popup-content label {
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #333; /* Consistent label color */
+}
+
+/* Input, textarea, and select field styling */
+.popup-content input,
+.popup-content textarea,
+.popup-content select {
+  margin-bottom: 15px; /* Space between fields */
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%; /* Full width of the popup */
+  box-sizing: border-box; /* Include padding and border in width */
+}
+
+/* Textarea specific styling */
+.popup-content textarea {
+  resize: vertical; /* Allow vertical resizing */
+}
+
+/* Button styling */
+.popup-content button {
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.popup-content button.admin-btn {
+  background-color: #28a745;
+}
+
+.popup-content button.cancel-btn {
+  background-color: #dc3545;
+}
+
+.popup-content button:hover {
+  opacity: 0.9; /* Slightly adjust hover effect */
 }

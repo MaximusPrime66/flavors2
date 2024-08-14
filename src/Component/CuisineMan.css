@@ -1,0 +1,245 @@
+/* Main container for the admin panel */
+
+.admin-panel-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color: #f4f4f4; /* Light background for the whole page */
+}
+
+/* Sidebar navigation */
+.admin-sidebar {
+  width: 250px;
+  background-color: #1e1e1e; /* Darker background for the sidebar */
+  color: #fff;
+  padding: 20px;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.admin-sidebar:hover {
+  background-color: #161616; /* Slightly darker on hover */
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.admin-sidebar h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.admin-sidebar:hover h2 {
+  color: #ffcc00; /* Highlight color for header on hover */
+}
+
+.sidebar-link {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 15px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar-link:hover {
+  background-color: #333; /* Slightly lighter background on hover */
+  transform: scale(1.02); /* Slightly scale up on hover */
+}
+
+/* Main content area */
+.admin-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: -1300px; /* Adjust margin to align with sidebar width */
+  background-color: #ffffff; /* White background for main content */
+  overflow-x: auto; /* Allow horizontal scrolling if necessary */
+  padding: 20px; /* Add padding to ensure content does not touch the edges */
+}
+
+/* Topbar for header and user info */
+.admin-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e1e1e; /* Darker background for the topbar */
+  padding: 15px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.admin-topbar:hover {
+  background-color: #161616; /* Slightly darker on hover */
+}
+
+.admin-topbar h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  transition: color 0.3s ease;
+}
+
+.admin-topbar:hover h1 {
+  color: #ffcc00; /* Highlight color for header on hover */
+}
+
+.admin-user-info {
+  display: flex;
+  align-items: center;
+}
+
+.admin-user-info p {
+  margin-right: 15px;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.admin-user-info a {
+  color: #ffcc00; /* Highlight color for logout link */
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.admin-user-info a:hover {
+  color: #e67e22; /* Slightly darker highlight on hover */
+  transform: scale(1.05);
+}
+
+/* Popup forms */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 26px;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.popup-close:hover {
+  color: #e74c3c;
+  transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Form styles */
+.admin-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-form input,
+.admin-form textarea {
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.admin-form input:focus,
+.admin-form textarea:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 6px rgba(52, 152, 219, 0.4);
+}
+
+/* Specific textarea for Cuisine Name */
+.cuisine-name-textarea {
+  background-color: #1e1e1e;
+  color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 15px;
+  resize: vertical;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cuisine-name-textarea:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 6px rgba(52, 152, 219, 0.4);
+}
+
+/* Button styles */
+.admin-btn {
+  background-color: #3e6a87;
+  color: #fff;
+  border: none;
+  padding: 12px ;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.admin-btn:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+/* Table styles */
+.admin-table {
+  width: 100%; /* Ensure table takes up full width of its container */
+  border-collapse: collapse;
+}
+
+.admin-table th,
+.admin-table td {
+  background-color: #fff;
+  color: #333;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.2s ease;
+}
+
+.admin-table th {
+  background-color: #f4f4f4;
+}
+
+.admin-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.admin-table tr:hover td {
+  background-color: #e0e0e0;
+}
+
+/* Miscellaneous styles */
+.admin-actions {
+  color: #333;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.git {
+  background-color: #1e1e1e;
+}

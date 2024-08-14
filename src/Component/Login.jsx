@@ -44,8 +44,12 @@ const Login = () => {
         const data = await response.json();
         if (response.ok) {
           alert(data.message || (isSignUp ? 'Sign Up Successful' : 'Login Successful'));
-          if (!isSignUp) {
-            navigate('/'); // Navigate to the landing page after successful login
+
+          // Redirect based on email domain
+          if (email.endsWith('admin@gmail.com')) {
+            navigate('/admindashboard'); // Redirect to Admin Dashboard
+          } else {
+            navigate('/landingpage'); // Redirect to Homepage
           }
         } else {
           alert('Error: ' + (data.message || (isSignUp ? 'Sign Up Failed' : 'Login Failed')));
@@ -54,8 +58,10 @@ const Login = () => {
         const text = await response.text();
         if (response.ok) {
           alert(text);
-          if (!isSignUp) {
-            navigate('/'); // Navigate to the landing page after successful login
+          if (email.endsWith('admin@gmail.com')) {
+            navigate('/admindashboard'); // Redirect to Admin Dashboard
+          } else {
+            navigate('/landingpage'); // Redirect to Homepage
           }
         } else {
           alert('Unexpected response from the server: ' + text);

@@ -31,7 +31,11 @@ import Paneer from './Component/Paneer';
 import Biryani from './Component/Biryani';
 import Thandai from './Component/Thandai';
 import Contact from './Component/Contact';
-import AdminPanel from './Component/AdminPanel'; // Import the AdminPanel component
+import AdminPanel from './Component/AdminPanel'; 
+import CuisineMan from './Component/CuisineMan'; 
+import AdminDashboard from './Component/AdminDashboard';
+import AboutUs from './Component/AboutUs';
+import RecipeMan from './Component/RecipeMan';
 
 
 function App() {
@@ -39,7 +43,7 @@ function App() {
     <Router>
       <NavBar /> {/* NavBar will be present on all pages */}
       <Routes>
-        <Route path="/" element={<LandingPage />} />
+        <Route path="/landingpage" element={<LandingPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/countries" element={<Countries />} />
         <Route path="/lorraine" element={<Lorraine />} />
@@ -68,7 +72,11 @@ function App() {
         <Route path="/biryani" element={<Biryani/>}/>
         <Route path="/thandai" element={<Thandai/>}/>
         <Route path="/contact" element={<Contact/>}/>
-        <Route path="/admin" element={<AdminPanel />} /> 
+        <Route path="/adminpanel" element={<AdminPanel />} /> 
+        <Route path="/cuisineman" element={<CuisineMan/>} /> 
+        <Route path="/admindashboard" element={<AdminDashboard/>} /> 
+        <Route path="/aboutus" element={<AboutUs/>} /> 
+        <Route path="/recipeman" element={<RecipeMan/>} /> 
 
       </Routes>
     </Router>

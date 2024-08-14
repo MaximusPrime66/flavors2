@@ -49,11 +49,11 @@ const Arancini = () => {
   };
 
   return (
-    <section className="section">
-      <div className="container">
+    <section className="sectionarancini">
+      <div className="containerarancini">
         <div className="columns is-centered is-mobile">
           <div className="column is-10-tablet is-7-widescreen">
-            <article className="recipe box">
+            <article className="recipearancini box">
               {recipe.img && (
                 <div className="recipe__img">
                   <img src={recipe.img} alt={recipe.title} />

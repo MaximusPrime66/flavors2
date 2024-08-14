@@ -84,7 +84,7 @@ const ContactUs = () => {
                           <label htmlFor="message">Message</label>
                           <textarea
                             id="message"
-                            className="form-control form-group"
+                            className="kil"
                             placeholder="Your Message"
                             rows="4"
                             value={formData.message}

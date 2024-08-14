@@ -1,3 +1,5 @@
+/* Contact Us Section Styling */
+
 .contact_us {
   background-color: #000; /* Changed to black */
   padding: 60px 0; /* Reduced padding for a more compact layout */
@@ -6,15 +8,16 @@
 .contact_inner {
   background-color: #000; /* Changed to black */
   position: relative;
-  box-shadow: 20px 22px 44px #cccc;
   border-radius: 15px; /* Adjust border radius for a square look */
   padding: 20px; /* Reduced padding for a compact container */
   max-width: 500px; /* Adjust width to be more square-like */
   margin: 0 auto; /* Center the container */
+  border: 0.1px solid #fff; /* Added thin white border */
 }
 
 .contact_field {
   padding: 20px; /* Reduced padding for a more compact form */
+  
 }
 
 .contact_field h3 {
@@ -35,7 +38,8 @@
   border-radius: 0;
   border: none;
   border-bottom: 1px solid #ccc;
-  color: #fff; /* Changed to white */
+  color: #ffffff; /* Changed to white */
+  
 }
 
 .contact_field .form-control:focus {
@@ -58,6 +62,7 @@
   width: 300px; /* Made it square */
   padding: 20px; /* Reduced padding */
   border-radius: 15px; /* Adjusted border radius for a square look */
+  border: 2px solid #fff; /* Added thin white border */
 }
 
 .contact_info_sec h4 {

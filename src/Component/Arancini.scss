@@ -1,4 +1,4 @@
-.recipe {
+.recipearancini {
   border: 1px solid #eee;
   padding: 0;
   position: relative;
@@ -8,9 +8,18 @@
   text-align: center;
   margin: 0 auto;
   max-width: 60%;
-  background-color: #000; /* Black background */
-  color: #fff; /* White text color for contrast */
+  background-color: #000000; /* Black background */
+  color: #000000; /* White text color for contrast */
   
+  .sectionarancini
+  {
+    background-color: #3298dc;
+  }
+  .containerarancini
+  {
+    background-color: #3298dc;
+
+  }
   header {
     width: 100%;
     border-bottom: 1px solid #eee;
