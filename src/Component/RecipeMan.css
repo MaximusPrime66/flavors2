@@ -58,15 +58,13 @@
   
   /* Styles for buttons */
   .recipe-btn {
-    padding: 10px 20px;
-    margin: 0 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+    background-color: #3e6a87;
+  color: #fff;
+  border: none;
+  padding: 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
   }
   
   .recipe-btn:hover {
@@ -88,7 +86,7 @@
   
   /* Popup container styling */
   .popup-container {
-    background: white;
+    background: rgb(0, 0, 0);
     padding: 20px;
     border-radius: 8px;
     position: relative;
@@ -138,31 +136,35 @@
   }
   
   /* Table styles with inverted colors */
-  .recipe-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    background-color: #333; /* Dark background for the table */
-    color: #fff; /* Light text color */
-  }
-  
-  .recipe-table th,
-  .recipe-table td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #555; /* Darker border color */
-    font-size: 0.9rem;
-  }
-  
-  .recipe-table th {
-    background-color: #444; /* Slightly lighter background for headers */
-  }
-  
-  .recipe-table tr:nth-child(even) {
-    background-color: #444; /* Alternating row background color */
-  }
-  
-  .recipe-table tr:hover td {
-    background-color: #555; /* Highlight color on row hover */
-  }
-  
+ /* Table styles with updated colors */
+.recipe-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff; /* White background for the table */
+  color: #333; /* Dark text color for contrast */
+}
+
+.recipe-table th,
+.recipe-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd; /* Lighter border color */
+  font-size: 0.9rem;
+}
+
+.recipe-table th {
+  background-color: #f4f4f4; /* Light background for headers */
+}
+
+.recipe-table tr:nth-child(even) {
+  background-color: #f9f9f9; /* Alternating row background color */
+}
+
+.recipe-table tr:hover td {
+  background-color: #e0e0e0; /* Highlight color on row hover */
+}
+.kil
+{
+  color: #333;
+}

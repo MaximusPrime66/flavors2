@@ -132,7 +132,7 @@ const AdminDashboard = () => {
               <h1>Admin Dashboard</h1>
               <div className="admin-user-info">
                 <p>Welcome, Admin</p>
-                <Link to="/logout" className="nav-link">Logout</Link>
+                {/* <Link to="/logout" className="nav-link">Logout</Link> */}
               </div>
             </header>
             <div className="admin-cards">

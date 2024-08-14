@@ -63,7 +63,7 @@ const LandingPage = () => {
               playsInline
             >
               <source
-                src="/videos/cheese e.mp4" // Ensure this path is correct
+                src="/videos/cheese12.mp4" // Ensure this path is correct
                 type="video/mp4"
               />
               Your browser does not support the video tag.

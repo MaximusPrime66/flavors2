@@ -190,7 +190,7 @@ const RecipeMan = () => {
         </div>
 
         <section id="recipe-management" className="recipe-content">
-          <h2>Available Recipes</h2>
+          <h2 className='kil'>Available Recipes</h2>
           {error && <p className="error-message">{error}</p>}
           <table className="recipe-table">
             <thead>

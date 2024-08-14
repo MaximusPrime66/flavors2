@@ -9,17 +9,8 @@
   margin: 0 auto;
   max-width: 60%;
   background-color: #000000; /* Black background */
-  color: #000000; /* White text color for contrast */
+  color: #fff; /* White text color for contrast */
   
-  .sectionarancini
-  {
-    background-color: #3298dc;
-  }
-  .containerarancini
-  {
-    background-color: #3298dc;
-
-  }
   header {
     width: 100%;
     border-bottom: 1px solid #eee;
@@ -214,4 +205,12 @@
       transition: transform 0.3s, filter 0.3s;
     }
   }
+}
+
+.sectionarancini
+{
+  background: #200122;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #6f0000, #200122);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #6f0000, #200122); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
 }

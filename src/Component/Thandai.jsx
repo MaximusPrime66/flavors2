@@ -50,7 +50,7 @@ const Thandai = () => {
   };
 
   return (
-    <section className="section">
+    <section className="thansection">
       <div className="container">
         <div className="columns is-centered is-mobile">
           <div className="column is-10-tablet is-7-widescreen">

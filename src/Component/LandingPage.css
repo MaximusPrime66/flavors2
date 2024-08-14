@@ -17,8 +17,7 @@
     color-scheme: dark;
     font-family: 'Inter', sans-serif;
 
-    /* Open Props - oklch colors v2 config */
-    /* https://codepen.io/argyleink/pen/eYxJJbr */
+   
     --palette-hue: 249;
     --palette-hue-rotate-by: 0;
     --palette-chroma: 0;

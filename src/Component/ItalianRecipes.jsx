@@ -9,7 +9,6 @@ const AdvertisersServiceCard = () => {
         <div className="row">
           <div className="section-header text-center">
             <h2 className="fw-bold fs-1">
-              <h3>Our</h3>
               <span className="b-class-secondary">Italian </span>Dishes
             </h2>
             <p className="sec-icon">

@@ -98,7 +98,7 @@ const Arancini = () => {
                 <ul className="recipe__ingredients">
                   {recipe.ingredients.map((ingredient, index) => (
                     <li key={index}>
-                      <label>
+                      <label className=''>
                         <input
                           type="checkbox"
                           checked={!!checkedIngredients[index]}

@@ -29,7 +29,7 @@ html, body {
 }
 
 body {
-  background-color: var(--bg-color); /* Changed to black */
+  /* background-color: var(--bg-color);  */
   font-family: var(--font-stack-content);
   font-size: 14px;
   color: var(--primary-color);

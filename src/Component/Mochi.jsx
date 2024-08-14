@@ -49,7 +49,7 @@ const Mochi = () => {
   };
 
   return (
-    <section className="section">
+    <section className="mochisection">
       <div className="container">
         <div className="columns is-centered is-mobile">
           <div className="column is-10-tablet is-7-widescreen">
